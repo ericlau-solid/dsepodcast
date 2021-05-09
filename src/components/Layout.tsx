@@ -1,12 +1,12 @@
 import * as React from 'react';
-import {Flex} from "@chakra-ui/react";
-import Masthead from "./Masthead";
+import {Box, Container, Flex} from "@chakra-ui/react";
+import Hero from "./Hero";
 import Navigation from './Navigation';
 
 
-const Footer = () => (<>Sponsored by Brainy Butlers Solutions Ltd. Copyright 2021</>);
+const Footer = () => (<Container bg={'primary.bg'} color={'primary.text'} w={'100%'} mt={10} pt={3} pb={3}>Sponsored by Brainy Butlers Solutions Ltd. Copyright © 2021</Container>);
 
-const Layout = ({children}) => {
+const Layout = ({children, heroConfig}) => {
     return (
         <Flex
             direction="column"
@@ -15,7 +15,7 @@ const Layout = ({children}) => {
             m="0 auto"
         >
             <Navigation/>
-            <header><Masthead/></header>
+            <Hero config={heroConfig}/>
             <main>{children}</main>
             <footer><Footer/></footer>
         </Flex>

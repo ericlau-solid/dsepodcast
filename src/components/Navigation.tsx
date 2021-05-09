@@ -60,7 +60,7 @@ const Navigation = (props) => {
                     {/*<MenuItem to="/coaching">Coaching</MenuItem>*/}
                     {/*<MenuItem to="/consulting">Consulting</MenuItem>*/}
                     {/*<MenuItem to="/why">Why</MenuItem>*/}
-                    <MenuItem to="/feedback" isLast>
+                    <MenuItem to="/subscribe" isLast>
                         <Button
                             size="sm"
                             rounded="md"
@@ -71,7 +71,7 @@ const Navigation = (props) => {
                                 color: ["primary.bg", "primary.bg", "primary.bg", "primary.bg"]
                             }}
                         >
-                            Send feedback
+                            Subscribe
                         </Button>
                     </MenuItem>
                 </Flex>
