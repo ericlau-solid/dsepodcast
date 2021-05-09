@@ -8,7 +8,7 @@ import Helmet from 'react-helmet';
 
 
 const Footer = () => (
-    <Container bg={'primary.bg'} color={'primary.text'} w={'100%'} mt={10} pt={3} pb={3}>Sponsored by Brainy Butlers
+    <Container bg={'primary.bg'} color={'primary.text'} w={'100%'} mt={10} pt={3} pb={3} borderWidth="1px" borderRadius="lg" overflow="hidden">Sponsored by Brainy Butlers
         Solutions Ltd. Copyright © 2021</Container>);
 
 const Layout = ({children, heroConfig = {}}) => {
