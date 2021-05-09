@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Diverse Software Engineers Podcast",
@@ -26,5 +30,13 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: `gatsby-source-buzzsprout-api`,
+      options: {
+        name: `DSEPodcast`,
+        token: process.env.BUZZSPROUT_TOKEN,
+        podcastId: process.env.PODCAST_ID
+      }
+    }
   ],
 };
