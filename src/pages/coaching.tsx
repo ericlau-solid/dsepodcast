@@ -1,31 +1,29 @@
-import * as React from "react"
-import {Helmet} from 'react-helmet';
-import {ChakraProvider, extendTheme} from "@chakra-ui/react"
-import Layout from "../components/Layout";
-import "@fontsource/poppins/400.css"
+import {ChakraProvider} from "@chakra-ui/react";
 import theme from "../theme";
-
+import {Helmet} from 'react-helmet';
+import Layout from "../components/Layout";
+import * as React from "react";
 
 const Head = () => (
     <Helmet>
         <meta charSet="utf-8"/>
-        <title>Diverse Software Engineers Podcast</title>
-        <link rel="canonical" href="https://dsepodcast.com"/>
+        <title>Coaching | Diverse Software Engineers Podcast</title>
+        <link rel="canonical" href="https://dsepodcast.com/coaching"/>
     </Helmet>
 )
 
 // markup
-const IndexPage = () => {
+const CoachingPage = () => {
     return (
         <ChakraProvider theme={theme}>
             <Head/>
             <Layout>
                 <div>
-                    Main content
+                    Coaching - stay tuned.
                 </div>
             </Layout>
         </ChakraProvider>
     )
 }
 
-export default IndexPage
+export default CoachingPage

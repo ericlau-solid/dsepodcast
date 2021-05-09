@@ -1,13 +1,24 @@
 import * as React from 'react';
-import {Container, Stack} from "@chakra-ui/react";
+import {Flex} from "@chakra-ui/react";
+import Masthead from "./Masthead";
+import Navigation from './Navigation';
 
-const Layout = ({masthead}) => {
+
+const Footer = () => (<>Sponsored by Brainy Butlers Solutions Ltd. Copyright 2021</>);
+
+const Layout = ({children}) => {
     return (
-        <Container>
-            <Stack>
-                <header>{masthead}</header>
-            </Stack>
-        </Container>
+        <Flex
+            direction="column"
+            align="center"
+            maxW={{xl: "1200px"}}
+            m="0 auto"
+        >
+            <Navigation/>
+            <header><Masthead/></header>
+            <main>{children}</main>
+            <footer><Footer/></footer>
+        </Flex>
     )
 }
 
