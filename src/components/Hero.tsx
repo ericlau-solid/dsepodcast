@@ -1,6 +1,6 @@
 import * as React from "react";
 import {Link} from 'gatsby';
-import {Box, Button, Flex, Heading, Stack, Text} from "@chakra-ui/react";
+import {Box, Button, Container, Flex, Heading, Stack, Text} from "@chakra-ui/react";
 import {StaticImage} from "gatsby-plugin-image";
 
 const Hero = ({
@@ -62,20 +62,19 @@ const Hero = ({
                         {ctaText}
                     </Button>
                 </Link>
-                <Box borderWidth="1px" borderRadius="lg" overflow="hidden" padding={2} bg={"primary.bg"}>
+                <Container borderWidth="1px" borderRadius="lg" overflow="hidden" padding={2} bg={"primary.bg"}>
                     <Text
                         fontSize="s"
                         textAlign="left"
-                        color="primary.text"
+                        color="white"
                     >
                         Diverse Software Engineers Podcast is the definitive podcast for learning the "soft" skills that
                         are
-                        essential for gaining fulfilling work, and keep them coming. Through the lens of a male
-                        Chinese-Canadian expert, and a female Iranian-Canadian up-and-coming engineer, they will empower
-                        you
-                        to break some glass ceilings, and build software that delights.
+                        essential for gaining fulfilling work, and keep them coming. Through the lens of consultant Eric Lau,
+                        and Iranian-Canadian up-and-coming engineer Fatima Agheli, we will empower
+                        you to break some glass ceilings, and build software that delights.
                     </Text>
-                </Box>
+                </Container>
             </Stack>
             <Box w={{base: "80%", sm: "60%", md: "50%"}} mb={{base: 12, md: 0}}>
                 <StaticImage src={'../images/dsecover-rect.jpg'} size="100%" rounded="1rem" shadow="2xl"
