@@ -21,6 +21,7 @@ const Layout = ({children, heroConfig = {}}) => {
             align="center"
             maxW={{xl: "1200px"}}
             m="0 auto"
+            bgColor={'#FAF5FF'}
         >
             <Helmet>
                 <link rel="icon" href={favicon}/>
