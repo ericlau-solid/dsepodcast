@@ -4,6 +4,7 @@
   "private": true,
   "description": "Diverse Software Engineers Podcast",
   "author": "Eric Lau",
+  "sideEffects": false,
   "keywords": [
     "gatsby"
   ],
