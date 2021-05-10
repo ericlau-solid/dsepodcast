@@ -24,9 +24,7 @@ const Episode = ({title, description, season_number, episode_number, published_a
             <Heading as={'h3'} size="l" color={'primary.800'} fontStyle={'italic'}>Season {season_number},
                 Episode {episode_number} {'=>'} {title}</Heading>
             <Text mt={4} dangerouslySetInnerHTML={{
-                __html: xss(description, {
-                    whiteList: ['p', 'b', 'i'], stripIgnoreTag: true
-                })
+                __html: xss(description)
             }}/>
             <Text as={'i'}>{dayjs(published_at).format('dddd, MMMM D, YYYY')}</Text>
             <div id="buzzsprout-player-8475794"></div>

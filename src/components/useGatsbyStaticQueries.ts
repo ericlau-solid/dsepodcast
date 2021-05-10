@@ -4,7 +4,11 @@ export const useBuzzsproutEpisodes = () => {
   const {allPodcastEpisodeDsePodcast} = useStaticQuery(
       graphql`
           query BuzzsproutEpisodes {
-              allPodcastEpisodeDsePodcast(filter: {private: {eq: true}}, limit: 10) {
+              allPodcastEpisodeDsePodcast(
+                  filter: {private: {eq: false}}
+                  limit: 10
+                  sort: {fields: published_at, order: DESC}
+              ) {
                   nodes {
                       title
                       description
