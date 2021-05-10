@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Flex, Text} from "@chakra-ui/react";
+import {Flex, HStack, Text} from "@chakra-ui/react";
 import Hero from "./Hero";
 import Navigation from './Navigation';
 // @ts-ignore
@@ -9,11 +9,11 @@ import "@fontsource/poppins/400.css"
 
 
 const Footer = () => (
-    <Flex as={'footer'} bg={'primary.bg'} color={'primary.text'} w={'100%'} mt={10} pt={3} pb={3} pr={[3, 9, 17, 37]}
-          justifyContent={'end'} overflow="hidden">
-        <Text fontSize={'xs'}>Sponsored by Brainy Butlers
+    <HStack as={'footer'} bg={'primary.bg'} color={'primary.text'} w={'100%'} mt={10} pt={3} pb={3} pr={[3, 9, 17, 37]}
+          overflow="hidden" justifyContent={'flex-end'}>
+        <Text textAlign={'right'} fontSize={'xs'}>Sponsored by Brainy Butlers
             Solutions Ltd. Copyright © 2021</Text>
-    </Flex>);
+    </HStack>);
 
 const Layout = ({children, heroConfig = {}}) => {
     return (
