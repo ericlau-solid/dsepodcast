@@ -3,17 +3,13 @@ import {Box, IconButton, Link} from "@chakra-ui/react";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-const LinkedInIcon = ({size}) => (<FontAwesomeIcon icon={faLinkedin} size={size}/>)
+const LinkedInIcon = () => (<FontAwesomeIcon icon={faLinkedin} size={'2x'}/>)
 
-const LinkedIn = ({size = 'md', profileUrl}) => {
+const LinkedIn = ({profileUrl}) => {
     return (
-        <Box>
-            <Link href={profileUrl} isExternal>
-                <IconButton variant={'primary'}
-                            aria-label={'LinkedIn Icon Button'}
-                            size={size}
-                            icon={<LinkedInIcon
-                                size={size}/>}/>
+        <Box display={'block'}>
+            <Link href={profileUrl} isExternal aria-label={'LinkedIn Icon Button'}>
+                <LinkedInIcon />
             </Link>
         </Box>
     )
