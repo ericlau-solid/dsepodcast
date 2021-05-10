@@ -5,8 +5,6 @@ import Logo from './Logo';
 import {faEllipsisV, faWindowClose} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {Link} from 'gatsby';
-import LinkedIn from "./LinkedIn";
-import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
 const MenuItem = ({children, isLast = false, to = "/", ...rest}) => {
     return (
@@ -47,7 +45,6 @@ const Navigation = (props) => {
                     />
                 </Link>
             </Flex>
-            <LinkedIn profileUrl={'https://www.linkedin.com/in/ericlau01/'}/>
             <Box display={{base: "block", md: "none"}} onClick={toggleMenu}>
                 {show ? <FontAwesomeIcon icon={faWindowClose}/> : <FontAwesomeIcon icon={faEllipsisV}/>}
             </Box>
