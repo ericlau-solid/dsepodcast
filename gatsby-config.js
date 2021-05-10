@@ -13,6 +13,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "@chakra-ui/gatsby-plugin",
+    "gatsby-plugin-webpack-bundle-analyser-v2",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
