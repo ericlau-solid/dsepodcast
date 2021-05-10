@@ -22,13 +22,14 @@ const heroConfig = {
 
 const HeroContent = () => (
     <>
-        Contact Eric Lau on LinkedIn to schedule a free 30 minute consultation session. Let him know you are a podcast
+        Whether you are an up-and-coming engineer, an industry veteran, or a client looking to outshine your competition,
+        contact Eric Lau on LinkedIn to schedule a free 30 minute consultation session. Let him know you are a podcast
         subscriber!
     </>
 )
 
 // markup
-const CoachingPage = () => {
+const ConsultPage = () => {
     return (
         <ChakraProvider theme={theme}>
             <Head/>
@@ -38,4 +39,4 @@ const CoachingPage = () => {
     )
 }
 
-export default CoachingPage
+export default ConsultPage
