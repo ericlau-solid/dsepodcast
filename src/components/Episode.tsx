@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Box, Heading, HStack, Text} from "@chakra-ui/react";
-import * as DOMPurify from 'isomorphic-dompurify';
+// import * as DOMPurify from 'isomorphic-dompurify';
 import * as dayjs from 'dayjs';
 import {Helmet} from 'react-helmet';
 
@@ -23,7 +23,7 @@ const Episode = ({title, description, season_number, episode_number, published_a
         <Box p={5} shadow="md" borderWidth="1px" as={'article'}>
             <Heading as={'h3'} size="l" color={'primary.800'} fontStyle={'italic'}>Season {season_number},
                 Episode {episode_number} {'=>'} {title}</Heading>
-            <Text mt={4} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(description)}}/>
+            <Text mt={4} dangerouslySetInnerHTML={{__html: description}}/>
             <Text as={'i'}>{dayjs(published_at).format('dddd, MMMM D, YYYY')}</Text>
             <div id="buzzsprout-player-8475794"></div>
             <Helmet>
