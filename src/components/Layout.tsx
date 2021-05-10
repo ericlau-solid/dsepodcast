@@ -5,6 +5,7 @@ import Navigation from './Navigation';
 // @ts-ignore
 import favicon from '../images/dselogo.ico';
 import Helmet from 'react-helmet';
+import "@fontsource/poppins/400.css"
 
 
 const Footer = () => (

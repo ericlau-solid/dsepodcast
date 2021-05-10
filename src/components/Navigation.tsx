@@ -40,11 +40,13 @@ const Navigation = (props) => {
             {...props}
         >
             <Flex align="center">
-                <Logo
-                    w="60px"
-                />
+                <Link to={'/'}>
+                    <Logo
+                        w="60px"
+                    />
+                </Link>
             </Flex>
-            <LinkedIn size={'lg'} profileUrl={'https://www.linkedin.com/in/ericlau01/'} />
+            <LinkedIn size={'lg'} profileUrl={'https://www.linkedin.com/in/ericlau01/'}/>
             <Box display={{base: "block", md: "none"}} onClick={toggleMenu}>
                 {show ? <FontAwesomeIcon icon={faWindowClose}/> : <FontAwesomeIcon icon={faEllipsisV}/>}
             </Box>
