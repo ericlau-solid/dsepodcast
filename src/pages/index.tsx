@@ -2,6 +2,7 @@ import * as React from "react"
 import {Helmet} from 'react-helmet';
 import {ChakraProvider, Flex} from "@chakra-ui/react"
 import Layout from "../components/Layout";
+import LatestEpisodes from "../components/LatestEpisodes";
 import "@fontsource/poppins/400.css"
 import theme from "../theme";
 
@@ -32,7 +33,7 @@ const IndexPage = () => {
             <Head/>
             <Layout heroConfig={heroConfig}>
                 <Flex as={'main'}>
-                    episodes coming soon!
+                    <LatestEpisodes />
                 </Flex>
             </Layout>
         </ChakraProvider>
