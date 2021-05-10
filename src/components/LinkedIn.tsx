@@ -7,8 +7,8 @@ const LinkedInIcon = () => (<FontAwesomeIcon icon={faLinkedin} size={'2x'}/>)
 
 const LinkedIn = ({profileUrl}) => {
     return (
-        <Box display={'block'}>
-            <Link href={profileUrl} isExternal aria-label={'LinkedIn Icon Button'}>
+        <Box display={'block'} fontSize={'1rem'}>
+            <Link href={profileUrl} isExternal aria-label={'LinkedIn Icon Button'} font>
                 <LinkedInIcon />
             </Link>
         </Box>
