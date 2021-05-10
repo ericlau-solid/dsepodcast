@@ -39,7 +39,6 @@
     "gatsby-source-buzzsprout-api": "^1.0.4",
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-transformer-sharp": "^3.4.0",
-    "isomorphic-dompurify": "^0.13.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
