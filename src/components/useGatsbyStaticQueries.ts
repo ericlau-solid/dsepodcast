@@ -17,6 +17,7 @@ export const useBuzzsproutEpisodes = () => {
                       tags
                       total_plays
                       id
+                      published_at(fromNow: false)
                   }
               }
           }
