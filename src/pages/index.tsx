@@ -31,7 +31,7 @@ const IndexPage = () => {
         <ChakraProvider theme={theme}>
             <Head/>
             <Layout heroConfig={heroConfig}>
-                <Flex as={'main'}>
+                <Flex as={'main'} w={['90%', '80%', '70%','70%']}>
                     <LatestEpisodes/>
                 </Flex>
             </Layout>
