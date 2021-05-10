@@ -5,7 +5,7 @@ import {StaticImage} from "gatsby-plugin-image";
 import LinkedIn from "./LinkedIn";
 
 const Hero = ({
-                  config,
+                  config, children,
                   ...rest
               }) => {
     const {
@@ -69,11 +69,7 @@ const Hero = ({
                         textAlign="left"
                         color="white"
                     >
-                        Diverse Software Engineers Podcast is the definitive podcast for learning the "soft" skills that
-                        are
-                        essential for gaining fulfilling work, and keep them coming. Through the lens of consultant Eric Lau,
-                        and Iranian-Canadian up-and-coming engineer Fatima Agheli, we will empower
-                        you to break some glass ceilings, and build software that delights.
+                        {children}
                     </Text>
                 </Container>
                 <LinkedIn profileUrl={'https://www.linkedin.com/in/ericlau01/'}/>

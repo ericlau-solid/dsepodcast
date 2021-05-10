@@ -10,12 +10,13 @@ import "@fontsource/poppins/400.css"
 
 const Footer = () => (
     <HStack as={'footer'} bg={'primary.bg'} color={'primary.text'} w={'100%'} mt={10} pt={3} pb={3} pr={[3, 9, 17, 37]}
-          overflow="hidden" justifyContent={'flex-end'}>
+            overflow="hidden" justifyContent={'flex-end'}>
         <Text textAlign={'right'} fontSize={'xs'}>Sponsored by Brainy Butlers
             Solutions Ltd. Copyright © 2021</Text>
     </HStack>);
 
-const Layout = ({children, heroConfig = {}}) => {
+const Layout = ({children, heroConfig = {}, heroContent = (<></>)}) => {
+    const HeroContent = heroContent;
     return (
         <Flex
             direction="column"
@@ -28,7 +29,7 @@ const Layout = ({children, heroConfig = {}}) => {
                 <link rel="icon" href={favicon}/>
             </Helmet>
             <Navigation/>
-            {Object.keys(heroConfig).length > 0 && <Hero config={heroConfig}/>}
+            {Object.keys(heroConfig).length > 0 && <Hero config={heroConfig}>{HeroContent}</Hero>}
             {children}
             <Footer/>
         </Flex>

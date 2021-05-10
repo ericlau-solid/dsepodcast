@@ -25,12 +25,22 @@ const heroConfig = {
     ctaLink: "/subscribe"
 };
 
+const HeroContent = () => (
+    <>
+        Diverse Software Engineers Podcast is the definitive podcast for learning the "soft" skills that
+        are
+        essential for gaining fulfilling work, and keep them coming. Through the lens of consultant Eric Lau,
+        and Iranian-Canadian up-and-coming engineer Fatima Agheli, we will empower
+        you to break some glass ceilings, and build software that delights.
+    </>
+)
+
 // markup
 const IndexPage = () => {
     return (
         <ChakraProvider theme={theme}>
             <Head/>
-            <Layout heroConfig={heroConfig}>
+            <Layout heroConfig={heroConfig} heroContent={<HeroContent />}>
                 <Flex as={'main'} w={['90%', '80%', '70%','70%']}>
                     <LatestEpisodes/>
                 </Flex>
