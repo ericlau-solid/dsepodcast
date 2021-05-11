@@ -44,7 +44,6 @@ const IndexPage = () => {
             <Layout heroConfig={heroConfig} heroContent={<HeroContent />}>
                 <VStack as={'main'} w={['90%', '80%', '70%','70%']} >
                     <LatestEpisodes/>
-                    <Player />
                 </VStack>
             </Layout>
         </ChakraProvider>

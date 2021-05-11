@@ -61,7 +61,7 @@ const Navigation = (props) => {
                     <MenuItem to="/">Home</MenuItem>
                     {/*<MenuItem to="/coaching">Coaching</MenuItem>*/}
                     <MenuItem to="/consult">Consult</MenuItem>
-                    {/*<MenuItem to="/why">Why</MenuItem>*/}
+                    <MenuItem to="/player">Player</MenuItem>
                     <MenuItem to="/subscribe" isLast>
                         <Button
                             size="sm"
