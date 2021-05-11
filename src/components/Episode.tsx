@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {Box, Heading, HStack, Text} from "@chakra-ui/react";
 import * as dayjs from 'dayjs';
-import {Helmet} from 'react-helmet';
 import xss from 'xss';
 
 const Episode = ({title, description, season_number, episode_number, published_at, tags}) => {
@@ -27,15 +26,12 @@ const Episode = ({title, description, season_number, episode_number, published_a
                 __html: xss(description)
             }}/>
             <Text as={'i'}>{dayjs(published_at).format('dddd, MMMM D, YYYY')}</Text>
-            <div id="buzzsprout-player-8475794"></div>
-            <Helmet>
-                <script
-                    src="https://www.buzzsprout.com/1776406/8475794-snippet-do-you-dare-to-suck.js?container_id=buzzsprout-player-8475794&player=small"
-                    type="text/javascript" charSet="utf-8" defer></script>
-            </Helmet>
-            <HStack mt={12} spacing={['3px', '12px']}>{tags.split(',').map(t => <Box borderWidth="1px" borderRadius="lg"
-                                                                                     overflow="hidden" padding={2}
-                                                                                     bg={"primary.bg"} key={t}><Text
+            <HStack mt={12} spacing={['3px', '12px']}>{tags.length && tags.split(',').map(t => <Box borderWidth="1px"
+                                                                                                    borderRadius="lg"
+                                                                                                    overflow="hidden"
+                                                                                                    padding={2}
+                                                                                                    bg={"primary.bg"}
+                                                                                                    key={t}><Text
                 fontSize={'xs'} color={'white'}>{t}</Text></Box>)}</HStack>
 
         </Box>

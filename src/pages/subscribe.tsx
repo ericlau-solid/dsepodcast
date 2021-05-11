@@ -4,6 +4,7 @@ import {Helmet} from 'react-helmet';
 import Layout from "../components/Layout";
 import * as React from "react";
 import {StaticImage} from "gatsby-plugin-image";
+import ActionItems from "../components/ActionItems";
 
 const Head = () => (
     <Helmet htmlAttributes={{lang: 'en'}}>
@@ -34,7 +35,7 @@ const CoachingPage = () => {
                 >
                     <Stack
                         spacing={4}
-                        w={{base: "80%", md: "60%"}}
+                        w={{base: "95%", md: "70%"}}
                         align={["center", "center", "flex-start", "flex-start"]}
                     >
                         <Heading
@@ -44,6 +45,7 @@ const CoachingPage = () => {
                             color="primary.800"
                             textAlign={["center", "center", "left", "left"]}
                         >How to Subscribe to Diverse Software Engineers Podcast</Heading>
+                        <ActionItems />
                         <Box as='section'>
                             <Heading
                                 as="h2"

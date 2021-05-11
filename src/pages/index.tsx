@@ -1,9 +1,10 @@
 import * as React from "react"
 import {Helmet} from 'react-helmet';
-import {ChakraProvider, Flex} from "@chakra-ui/react"
+import {ChakraProvider, Flex, VStack} from "@chakra-ui/react"
 import Layout from "../components/Layout";
 import LatestEpisodes from "../components/LatestEpisodes";
 import theme from "../theme";
+import Player from "../components/Player";
 
 
 const Head = () => (
@@ -41,9 +42,10 @@ const IndexPage = () => {
         <ChakraProvider theme={theme}>
             <Head/>
             <Layout heroConfig={heroConfig} heroContent={<HeroContent />}>
-                <Flex as={'main'} w={['90%', '80%', '70%','70%']}>
+                <VStack as={'main'} w={['90%', '80%', '70%','70%']} >
                     <LatestEpisodes/>
-                </Flex>
+                    <Player />
+                </VStack>
             </Layout>
         </ChakraProvider>
     )

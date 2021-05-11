@@ -1,8 +1,12 @@
 import * as React from "react";
 import {Link} from 'gatsby';
-import {Box, Button, Container, Flex, Heading, Stack, Text} from "@chakra-ui/react";
+import {Box, Button, Container, Flex, Heading, HStack, Stack, Text} from "@chakra-ui/react";
 import {StaticImage} from "gatsby-plugin-image";
 import LinkedIn from "./LinkedIn";
+import Spotify from "./Spotify";
+import Stitcher from "./Stitcher";
+import Rss from "./Rss";
+import ActionItems from "./ActionItems";
 
 const Hero = ({
                   config, children,
@@ -72,7 +76,7 @@ const Hero = ({
                         {children}
                     </Text>
                 </Container>
-                <LinkedIn profileUrl={'https://www.linkedin.com/in/ericlau01/'}/>
+                <ActionItems />
             </Stack>
             <Box w={{base: "80%", sm: "60%", md: "50%"}} mb={{base: 12, md: 0}}>
                 <StaticImage src={'../images/dsecover-rect.jpg'} size="100%" rounded="1rem" shadow="2xl"

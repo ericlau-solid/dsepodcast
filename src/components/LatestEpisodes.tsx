@@ -1,10 +1,11 @@
 import * as React from 'react';
 import {Box, Heading, StackDivider, VStack} from "@chakra-ui/react";
 import {useBuzzsproutEpisodes} from "./useGatsbyStaticQueries";
+import * as dayjs from 'dayjs';
 import Episode from "./Episode";
 
 const LatestEpisodes = () => {
-    const latestEpisodesData = useBuzzsproutEpisodes();
+    const latestEpisodesData = useBuzzsproutEpisodes().filter(e => dayjs(e.published_at) < dayjs());
 
     return (
         <Box w={'100%'}>
