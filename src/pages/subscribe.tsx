@@ -9,7 +9,7 @@ import ActionItems from "../components/ActionItems";
 const Head = () => (
     <Helmet htmlAttributes={{lang: 'en'}}>
         <meta charSet="utf-8"/>
-        <title>How to Subscribe to Diverse Software Engineers Podcast</title>
+        <title>Feedback / Questions Welcome! How to Subscribe to Diverse Software Engineers Podcast</title>
         <link rel="canonical" href="https://dsepodcast.com/subscribe"/>
     </Helmet>
 )
