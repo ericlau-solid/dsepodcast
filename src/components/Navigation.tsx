@@ -73,7 +73,7 @@ const Navigation = (props) => {
                                 color: ["primary.bg", "primary.bg", "primary.bg", "primary.bg"]
                             }}
                         >
-                            Subscribe
+                            Feedback!
                         </Button>
                     </MenuItem>
                 </Flex>
