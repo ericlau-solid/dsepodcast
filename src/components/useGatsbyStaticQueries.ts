@@ -21,6 +21,7 @@ export const useBuzzsproutEpisodes = () => {
                       tags
                       total_plays
                       id
+                      guid
                       published_at(fromNow: false)
                   }
               }
@@ -28,5 +29,10 @@ export const useBuzzsproutEpisodes = () => {
 
       `
   )
-    return allPodcastEpisodeDsePodcast.nodes;
+    const result = allPodcastEpisodeDsePodcast.nodes.map(e => (
+        {...e, transcriptUrl: `https://feeds.buzzsprout.com/${process.env.PODCAST_ID}/${e.guid?.split('-')[1]}/transcript`}
+    ));
+  console.log({result})
+  return result;
+
 }
