@@ -15,8 +15,12 @@ const linkStyle = {
 }
 
 const Spotify = () => {
+    const handleClick = () => {
+        // @ts-ignore
+        typeof window !== "undefined" && window.gtag("event", "click", {target: 'episode-Spotify'})
+    }
     return (
-        <Link href={'https://open.spotify.com/show/07ENQ8gbcPAMDcazUO2B8I'} isExternal style={linkStyle}>
+        <Link href={'https://open.spotify.com/show/07ENQ8gbcPAMDcazUO2B8I'} isExternal onClick={handleClick} style={linkStyle}>
             Spotify
         </Link>
     )

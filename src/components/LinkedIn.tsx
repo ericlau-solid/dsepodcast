@@ -6,8 +6,12 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 const LinkedInIcon = () => (<FontAwesomeIcon color={'#805AD5'} icon={faLinkedin} size={'2x'}/>)
 
 const LinkedIn = ({profileUrl}) => {
+    const handleClick = () => {
+        // @ts-ignore
+        typeof window !== "undefined" && window.gtag("event", "click", {target: 'LinkedIn-elau'})
+    }
     return (
-        <Link fontSize={'1rem'} href={profileUrl} isExternal>
+        <Link fontSize={'1rem'} href={profileUrl} isExternal onClick={handleClick}>
             <IconButton variant="outline"
                         aria-label={'LinkedIn Icon Button'} icon={<LinkedInIcon/>}
                         _hover={{

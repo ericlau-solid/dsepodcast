@@ -15,8 +15,12 @@ const linkStyle = {
 }
 
 const Stitcher = () => {
+    const handleClick = () => {
+        // @ts-ignore
+        typeof window !== "undefined" && window.gtag("event", "click", {target: 'episode-Stitcher'})
+    }
     return (
-        <Link href={'https://www.stitcher.com/podcast/diverse-software-engineers-podcast'} isExternal style={linkStyle}>
+        <Link href={'https://www.stitcher.com/podcast/diverse-software-engineers-podcast'} isExternal style={linkStyle} onClick={handleClick}>
             Stitcher
         </Link>
     )
