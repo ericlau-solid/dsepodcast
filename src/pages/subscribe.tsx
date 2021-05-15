@@ -18,7 +18,7 @@ const DSETitle = () => (
     <Text color="primary.text" bg={"primary.bg"} pl={4} pr={4} as={'strong'}>Diverse Software Engineers</Text>)
 
 // markup
-const CoachingPage = () => {
+const SubscribePage = () => {
     return (
         <ChakraProvider theme={theme}>
             <Head/>
@@ -163,4 +163,4 @@ const CoachingPage = () => {
     )
 }
 
-export default CoachingPage
+export default SubscribePage
