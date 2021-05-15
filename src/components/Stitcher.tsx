@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Link} from "@chakra-ui/react";
+import {OutboundLink} from "gatsby-plugin-google-gtag";
 
 const linkStyle = {
     backgroundImage: 'url(/listenOn.svg)',
@@ -15,14 +15,10 @@ const linkStyle = {
 }
 
 const Stitcher = () => {
-    const handleClick = () => {
-        // @ts-ignore
-        typeof window !== "undefined" && window.gtag("event", "click", {target: 'episode-Stitcher'})
-    }
     return (
-        <Link href={'https://www.stitcher.com/podcast/diverse-software-engineers-podcast'} isExternal style={linkStyle} onClick={handleClick}>
+        <OutboundLink href={'https://www.stitcher.com/podcast/diverse-software-engineers-podcast'} style={linkStyle}>
             Stitcher
-        </Link>
+        </OutboundLink>
     )
 }
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Link} from "@chakra-ui/react";
+import {OutboundLink} from "gatsby-plugin-google-gtag";
 
 const linkStyle = {
     backgroundImage: 'url(/listenOn.svg)',
@@ -15,14 +15,10 @@ const linkStyle = {
 }
 
 const Spotify = () => {
-    const handleClick = () => {
-        // @ts-ignore
-        typeof window !== "undefined" && window.gtag("event", "click", {target: 'episode-Spotify'})
-    }
     return (
-        <Link href={'https://open.spotify.com/show/07ENQ8gbcPAMDcazUO2B8I'} isExternal onClick={handleClick} style={linkStyle}>
+        <OutboundLink href={'https://open.spotify.com/show/07ENQ8gbcPAMDcazUO2B8I'} style={linkStyle}>
             Spotify
-        </Link>
+        </OutboundLink>
     )
 }
 
