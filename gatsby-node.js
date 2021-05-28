@@ -5,7 +5,7 @@ const getBuzzsproutTranscriptUrl = (episodeGuid) => (`https://feeds.buzzsprout.c
 
 exports.createPages = async({ graphql, actions }) => {
   const { createPage } = actions
-  const transcriptTemplate = path.resolve(`src/templates/Transcript.tsx`)
+  const episodeTemplate = path.resolve(`src/templates/Episode.tsx`)
   // Query for markdown nodes to use in creating pages.
   // You can query for whatever data you want to create pages for e.g.
   // products, portfolio items, landing pages, etc.
@@ -38,7 +38,7 @@ exports.createPages = async({ graphql, actions }) => {
   //
   //   await createPage({
   //     path: `/transcript/${episode.guid}`,
-  //     component: transcriptTemplate,
+  //     component: episodeTemplate,
   //     context: {
   //       ...episode, transcript
   //     }
@@ -55,8 +55,8 @@ exports.createPages = async({ graphql, actions }) => {
   const episodeTranscripts = await Promise.all(promises)
   result.data.allPodcastEpisodeDsePodcast.nodes.map((episode, index) => {
     createPage({
-          path: `/transcript/${episode.guid}`,
-          component: transcriptTemplate,
+          path: `/episode/${episode.guid}`,
+          component: episodeTemplate,
           context: {
             ...episode, transcript: episodeTranscripts[index]
           }

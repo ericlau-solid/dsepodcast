@@ -3,7 +3,7 @@ const calculateTranscriptUrls = (buzzsproutEpisodeGuid) => {
 
     return {
         buzzsproutFeedEpisodeTranscriptUrl: `https://feeds.buzzsprout.com/${process.env.PODCAST_ID}/${episodeId}/transcript`,
-        websiteLink: `/transcript/${buzzsproutEpisodeGuid}`
+        websiteLink: `/episode/${buzzsproutEpisodeGuid}`
     }
 }
 

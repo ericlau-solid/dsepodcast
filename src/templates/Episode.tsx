@@ -14,7 +14,7 @@ const Head = ({title, season_number, episode_number}) => (
     </Helmet>
 )
 
-const Transcript = (props) => {
+const Episode = (props) => {
     const {pageContext} = props;
     const {season_number, episode_number, title, guid, transcript} = pageContext;
     return (
@@ -63,4 +63,4 @@ const Transcript = (props) => {
     )
 }
 
-export default Transcript;
+export default Episode;
