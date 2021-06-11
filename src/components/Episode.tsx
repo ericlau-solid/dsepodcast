@@ -15,19 +15,6 @@ const Episode = ({title, description, season_number, episode_number, published_a
             }}/>
             <Text as={'i'}>{dayjs(published_at).format('dddd, MMMM D, YYYY')}</Text>
             <HStack mt={12} spacing={['3px', '12px']}>
-                <Link to={calculateTranscriptUrls(guid).websiteLink}> <Button
-                    size="sm"
-                    rounded="md"
-                    bg={["white", "white", "primary.bg", "primary.bg"]}
-                    color={["primary.bg", "primary.bg", "white", "white"]}
-                    _hover={{
-                        bg: ["primary.text", "primary.text", "primary.text", "primary.text"],
-                        color: ["primary.bg", "primary.bg", "primary.bg", "primary.bg"]
-                    }}
-                >
-                    Transcript
-                </Button></Link>
-                <Text>| Tags:</Text>
                 {tags.length && tags.split(',').map(
                 t => <Box borderWidth="1px"
                           borderRadius="lg"
