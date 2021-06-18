@@ -1,9 +1,12 @@
 import * as React from 'react';
-import {Box, Button, Heading, HStack, Text} from "@chakra-ui/react";
+import {Box, Heading, HStack, Text} from "@chakra-ui/react";
 import * as dayjs from 'dayjs';
+import * as relativeTime from 'dayjs/plugin/relativeTime';
 import xss from 'xss';
 import {Link} from "gatsby";
 import calculateTranscriptUrls from './calculateTranscriptUrls';
+
+dayjs.extend(relativeTime);
 
 const Episode = ({title, description, season_number, episode_number, published_at, tags, guid}) => {
     return (
@@ -13,7 +16,8 @@ const Episode = ({title, description, season_number, episode_number, published_a
             <Box mt={4} dangerouslySetInnerHTML={{
                 __html: xss(description)
             }}/>
-            <Text as={'i'}>{dayjs(published_at).format('dddd, MMMM D, YYYY')}</Text>
+            <hr />
+            <Text as={'i'}>Published {dayjs(published_at).fromNow()}</Text>
             <HStack mt={12} spacing={['3px', '12px']}>
                 {tags.length && tags.split(',').map(
                 t => <Box borderWidth="1px"
